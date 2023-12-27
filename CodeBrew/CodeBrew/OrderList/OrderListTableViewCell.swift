@@ -13,26 +13,23 @@ class OrderListTableViewCell: UITableViewCell {
     @IBOutlet weak var menuPriceLabel: UILabel!
     var cnt = 1
     var price = 0
+    var totalPrice = 0
+    var tapMinusButtonClosure : (() -> ())?
+    var tapPlusButtonClosure : (() -> ())?
     override func awakeFromNib() {
         super.awakeFromNib()
+        setUI()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        setUI()
     }
-    
     @IBAction func tapPlustCnt(_ sender: UIButton) {
-        cnt+=1
-        menuCntLabel.text = "\(cnt)"
-        menuPriceLabel.text = "\(price * cnt)원"
+        tapPlusButtonClosure?() // OrderListView 뷰에 action 전달
     }
     @IBAction func tapMinusCnt(_ sender: UIButton) {
-        if cnt > 0 {
-            cnt-=1
-        }
-        menuCntLabel.text = "\(cnt)"
-        menuPriceLabel.text = "\(price * cnt)원"
+        tapMinusButtonClosure?() // OrderListView 뷰에 action 전달
+        
     }
 }
 extension OrderListTableViewCell{
@@ -41,10 +38,10 @@ extension OrderListTableViewCell{
         menuCntLabel.textAlignment = .center
         menuPriceLabel.textAlignment = .right
     }
-    func setOrderList(model : OrderList){
+    func setOrderList(model : OrderList){ // 메뉴 리스트 데이터 바인딩
         menuNameLabel.text = model.menuName
         menuCntLabel.text = "\(model.cnt)"
-        menuPriceLabel.text = "\(model.menuPrice)원"
+        menuPriceLabel.text = "\(model.menuTotalPrice)원"
         cnt = model.cnt
         price = model.menuPrice
     }

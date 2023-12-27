@@ -10,4 +10,5 @@ struct OrderList {
     var menuName : String
     var cnt : Int
     var menuPrice : Int
+    var menuTotalPrice : Int
 }
