@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB" customClass="OrderTableViewHeader" customModule="CodeBrew" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="442" height="70"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ktu-0q-6iZ">
+                    <rect key="frame" x="15" y="0.0" width="412" height="70"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="총 주문 내역" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXO-U9-LQv">
+                            <rect key="frame" x="0.0" y="0.0" width="117.33333333333333" height="70"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="~개" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8d3-mb-EEH">
+                            <rect key="frame" x="147.33333333333334" y="0.0" width="117.33333333333334" height="70"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="~원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ga1-zq-Zzx">
+                            <rect key="frame" x="294.66666666666669" y="0.0" width="117.33333333333331" height="70"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="ktu-0q-6iZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="4Ul-wh-Od2"/>
+                <constraint firstAttribute="trailing" secondItem="ktu-0q-6iZ" secondAttribute="trailing" constant="15" id="Ief-zP-aMP"/>
+                <constraint firstAttribute="bottom" secondItem="ktu-0q-6iZ" secondAttribute="bottom" id="NCO-uX-nyI"/>
+                <constraint firstItem="ktu-0q-6iZ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="TPv-C3-gUa"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="OrderTotalCountLabel" destination="8d3-mb-EEH" id="Tlk-5b-XLH"/>
+                <outlet property="OrderTotalLabel" destination="lXO-U9-LQv" id="FPV-3q-yi6"/>
+                <outlet property="OrderTotalPriceLabel" destination="ga1-zq-Zzx" id="Vvz-wf-Uf7"/>
+                <outlet property="OrderTotalUpperStackView" destination="ktu-0q-6iZ" id="kaf-Lc-1af"/>
+            </connections>
+            <point key="canvasLocation" x="189.31297709923663" y="274.64788732394368"/>
+        </view>
+    </objects>
+</document>
