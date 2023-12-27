@@ -4,7 +4,7 @@
 //
 //  Created by 원동진 on 2023/12/26.
 //
-
+// ignore파일 추가
 import UIKit
 
 class MainViewController: UIViewController {
