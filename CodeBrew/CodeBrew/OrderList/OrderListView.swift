@@ -69,7 +69,7 @@ extension OrderListView : UITableViewDataSource,UITableViewDelegate{
         
         return cell
     }
-
+// 총 주문 내역 화면
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard let header =  tableView.dequeueReusableHeaderFooterView(withIdentifier: "OrderTableViewHeader") as? OrderTableViewHeader else { return UIView()}
         let sum = orderList.map{$0.cnt}.reduce(0, +)
@@ -77,5 +77,11 @@ extension OrderListView : UITableViewDataSource,UITableViewDelegate{
         header.OrderTotalPriceLabel.text = "\(orderListTotalSum)원"
         return header
     }
-    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete{
+            orderList.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
+
 }
