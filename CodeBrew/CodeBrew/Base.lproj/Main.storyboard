@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,8 +19,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IJP-IL-5nV" customClass="OrderListView" customModule="CodeBrew" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="59" width="393" height="704.66666666666663"/>
+                                <rect key="frame" x="0.0" y="563.66666666666663" width="393" height="200"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="HAd-Sk-CK2"/>
+                                </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="u0B-PM-zTo">
                                 <rect key="frame" x="198.33333333333337" y="773.66666666666663" width="184.66666666666663" height="34.333333333333371"/>
@@ -43,19 +48,69 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="a1V-d3-NqJ">
+                                <rect key="frame" x="0.0" y="59" width="393" height="489.66666666666674"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Z6Z-gu-EfZ">
+                                    <size key="itemSize" width="156" height="209"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="nzk-NU-LlP" customClass="MenuCollectionViewCell" customModule="CodeBrew" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="210"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Bhq-YG-9ZU">
+                                            <rect key="frame" x="0.0" y="0.0" width="160" height="210"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eCc-5b-Ms3">
+                                                    <rect key="frame" x="0.0" y="0.0" width="160" height="170"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6k-KL-VIp">
+                                                    <rect key="frame" x="0.0" y="170" width="160" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IKI-NQ-Hw3">
+                                                    <rect key="frame" x="0.0" y="189" width="160" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="160" height="210"/>
+                                        <connections>
+                                            <outlet property="menuIamge" destination="eCc-5b-Ms3" id="7Sl-cK-1vJ"/>
+                                            <outlet property="menuName" destination="c6k-KL-VIp" id="ula-Mc-1Gb"/>
+                                            <outlet property="menuPrice" destination="IKI-NQ-Hw3" id="yb4-Es-9jE"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="IJP-IL-5nV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4Hg-Qg-ANg"/>
+                            <constraint firstItem="IJP-IL-5nV" firstAttribute="top" secondItem="a1V-d3-NqJ" secondAttribute="bottom" constant="15" id="O68-As-Ahe"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="u0B-PM-zTo" secondAttribute="bottom" constant="10" id="TXa-zc-pyO"/>
-                            <constraint firstItem="IJP-IL-5nV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="V9a-nz-qZv"/>
+                            <constraint firstItem="a1V-d3-NqJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Zz7-fx-BYX"/>
+                            <constraint firstItem="a1V-d3-NqJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="glV-1p-ct8"/>
                             <constraint firstItem="u0B-PM-zTo" firstAttribute="top" secondItem="IJP-IL-5nV" secondAttribute="bottom" constant="10" id="hdZ-fy-e5O"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IJP-IL-5nV" secondAttribute="trailing" id="myg-l4-rJt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="a1V-d3-NqJ" secondAttribute="trailing" id="nkK-IT-p4v"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="u0B-PM-zTo" secondAttribute="trailing" constant="10" id="vx9-q7-ME1"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="collectionView" destination="a1V-d3-NqJ" id="V3b-CH-2w4"/>
                         <outlet property="orderListView" destination="IJP-IL-5nV" id="Tk5-1s-6aJ"/>
                     </connections>
                 </viewController>
@@ -69,7 +124,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
