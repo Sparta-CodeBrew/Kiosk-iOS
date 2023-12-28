@@ -8,7 +8,7 @@
 import UIKit
 
 class OrderListView: UIView {
-    var orderList : [OrderList] = []
+    var orderList : [OrderList] = [] // 주문내역 리스트 
     var cnt = 0
     var orderListTotalSum = 0
     var orderListPrice : [Int] = []
