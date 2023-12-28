@@ -23,6 +23,8 @@
 		F81DBB4A2B3AAEF400D57F37 /* CodeBrewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81DBB492B3AAEF400D57F37 /* CodeBrewTests.swift */; };
 		F81DBB542B3AAEF400D57F37 /* CodeBrewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81DBB532B3AAEF400D57F37 /* CodeBrewUITests.swift */; };
 		F81DBB562B3AAEF400D57F37 /* CodeBrewUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81DBB552B3AAEF400D57F37 /* CodeBrewUITestsLaunchTests.swift */; };
+		F8490E392B3D54D600E05965 /* TopMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8490E382B3D54D600E05965 /* TopMenuView.swift */; };
+		F8490E3B2B3D54E100E05965 /* TopMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8490E3A2B3D54E100E05965 /* TopMenuView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		F81DBB4F2B3AAEF400D57F37 /* CodeBrewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodeBrewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F81DBB532B3AAEF400D57F37 /* CodeBrewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeBrewUITests.swift; sourceTree = "<group>"; };
 		F81DBB552B3AAEF400D57F37 /* CodeBrewUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeBrewUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F8490E382B3D54D600E05965 /* TopMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMenuView.swift; sourceTree = "<group>"; };
+		F8490E3A2B3D54E100E05965 /* TopMenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopMenuView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +135,7 @@
 		F81DBB312B3AAEF300D57F37 /* CodeBrew */ = {
 			isa = PBXGroup;
 			children = (
+				F8490E352B3D54A000E05965 /* TopmenuList */,
 				F8521B6B2B3AE5AF0087F6FB /* OrderList */,
 				F81DBB322B3AAEF300D57F37 /* AppDelegate.swift */,
 				F81DBB342B3AAEF300D57F37 /* SceneDelegate.swift */,
@@ -158,6 +163,15 @@
 				F81DBB552B3AAEF400D57F37 /* CodeBrewUITestsLaunchTests.swift */,
 			);
 			path = CodeBrewUITests;
+			sourceTree = "<group>";
+		};
+		F8490E352B3D54A000E05965 /* TopmenuList */ = {
+			isa = PBXGroup;
+			children = (
+				F8490E382B3D54D600E05965 /* TopMenuView.swift */,
+				F8490E3A2B3D54E100E05965 /* TopMenuView.xib */,
+			);
+			path = TopmenuList;
 			sourceTree = "<group>";
 		};
 		F8521B6B2B3AE5AF0087F6FB /* OrderList */ = {
@@ -281,6 +295,7 @@
 				F81DBB3C2B3AAEF400D57F37 /* Assets.xcassets in Resources */,
 				F81DBB3A2B3AAEF300D57F37 /* Main.storyboard in Resources */,
 				F8120F832B3C2C0100388592 /* OrderListTableViewCell.xib in Resources */,
+				F8490E3B2B3D54E100E05965 /* TopMenuView.xib in Resources */,
 				F8120F7B2B3C290300388592 /* OrderListView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,6 +328,7 @@
 				F81DBB332B3AAEF300D57F37 /* AppDelegate.swift in Sources */,
 				F81DBB352B3AAEF300D57F37 /* SceneDelegate.swift in Sources */,
 				F8120F852B3C316300388592 /* OrderListStruct.swift in Sources */,
+				F8490E392B3D54D600E05965 /* TopMenuView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
