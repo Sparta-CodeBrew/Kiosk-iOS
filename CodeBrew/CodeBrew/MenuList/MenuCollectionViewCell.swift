@@ -9,4 +9,8 @@ import UIKit
 
 class MenuCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var menuIamge: UIImageView!
+    @IBOutlet weak var menuName: UILabel!
+    @IBOutlet weak var menuPrice: UILabel!
+    
 }
