@@ -18,7 +18,6 @@ class MainViewController: UIViewController {
     @IBOutlet weak var orderListView: OrderListView!
     var menuList = coffeMenu
     let sectionlnsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-    var menuNum = 0
     var orderList : [OrderList] = []
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,8 +29,7 @@ class MainViewController: UIViewController {
 
     // 결제 버튼
     @IBAction func btnPay(_ sender: Any) {
-        let totalMoney = orderList.map{$0.menuTotalPrice}.reduce(0, +)
-        let alert = UIAlertController(title: "결제 금액은 \(totalMoney)입니다.", message: "결제하시겠습니까 ?", preferredStyle: .alert)
+        let alert = UIAlertController(title: "결제 완료", message: "", preferredStyle: .alert)
         let sucess = UIAlertAction(title: "확인", style: .default)
         alert.addAction(sucess)
         present(alert, animated: true)

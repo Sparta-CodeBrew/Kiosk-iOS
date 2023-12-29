@@ -12,8 +12,9 @@ class OrderListView: UIView {
     var cnt = 0
     var orderListTotalSum = 0
     var orderListPrice : [Int] = []
+    var totalPayClosure : ((Int)->(Int))?
     @IBOutlet weak var OrderListTableView: UITableView!
- 
+    
     
 }
 extension OrderListView {
@@ -29,6 +30,7 @@ extension OrderListView {
     func setOrderListSum(sum : Int){
         orderListTotalSum = sum
     }
+    
 }
 extension OrderListView : UITableViewDataSource,UITableViewDelegate{
     
@@ -58,7 +60,6 @@ extension OrderListView : UITableViewDataSource,UITableViewDelegate{
             self.orderList[indexPath.row].menuTotalPrice = cell.totalPrice // 감소한 개수로 인한 메뉴 전체 가격 저장
             tableView.reloadData()
         }
-        
         return cell
     }
 // 총 주문 내역 화면
