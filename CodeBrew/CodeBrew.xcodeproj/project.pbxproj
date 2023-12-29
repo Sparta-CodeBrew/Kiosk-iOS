@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B7F7A442B3D5EA700E5E003 /* MenuListStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F7A432B3D5EA700E5E003 /* MenuListStruct.swift */; };
+		0B7F7A462B3D5FA100E5E003 /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F7A452B3D5FA100E5E003 /* MenuCollectionViewCell.swift */; };
 		F8120F712B3B489200388592 /* OrderTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8120F702B3B489200388592 /* OrderTableViewHeader.swift */; };
 		F8120F752B3B48C900388592 /* OrderTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8120F742B3B48C900388592 /* OrderTableViewHeader.xib */; };
 		F8120F792B3C28EB00388592 /* OrderListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8120F782B3C28EB00388592 /* OrderListView.swift */; };
@@ -45,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B7F7A432B3D5EA700E5E003 /* MenuListStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListStruct.swift; sourceTree = "<group>"; };
+		0B7F7A452B3D5FA100E5E003 /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
 		F8120F702B3B489200388592 /* OrderTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewHeader.swift; sourceTree = "<group>"; };
 		F8120F742B3B48C900388592 /* OrderTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderTableViewHeader.xib; sourceTree = "<group>"; };
 		F8120F782B3C28EB00388592 /* OrderListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListView.swift; sourceTree = "<group>"; };
@@ -94,6 +98,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B7F7A412B3D5E6F00E5E003 /* MenuList */ = {
+			isa = PBXGroup;
+			children = (
+				0B7F7A422B3D5E7C00E5E003 /* Model */,
+				0B7F7A452B3D5FA100E5E003 /* MenuCollectionViewCell.swift */,
+			);
+			path = MenuList;
+			sourceTree = "<group>";
+		};
+		0B7F7A422B3D5E7C00E5E003 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0B7F7A432B3D5EA700E5E003 /* MenuListStruct.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		F8120F7C2B3C2B8F00388592 /* Xib */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				F8490E352B3D54A000E05965 /* TopmenuList */,
+				0B7F7A412B3D5E6F00E5E003 /* MenuList */,
 				F8521B6B2B3AE5AF0087F6FB /* OrderList */,
 				F81DBB322B3AAEF300D57F37 /* AppDelegate.swift */,
 				F81DBB342B3AAEF300D57F37 /* SceneDelegate.swift */,
@@ -323,9 +345,11 @@
 			files = (
 				F8120F822B3C2C0100388592 /* OrderListTableViewCell.swift in Sources */,
 				F8120F712B3B489200388592 /* OrderTableViewHeader.swift in Sources */,
+				0B7F7A462B3D5FA100E5E003 /* MenuCollectionViewCell.swift in Sources */,
 				F81DBB372B3AAEF300D57F37 /* MainViewController.swift in Sources */,
 				F8120F792B3C28EB00388592 /* OrderListView.swift in Sources */,
 				F81DBB332B3AAEF300D57F37 /* AppDelegate.swift in Sources */,
+				0B7F7A442B3D5EA700E5E003 /* MenuListStruct.swift in Sources */,
 				F81DBB352B3AAEF300D57F37 /* SceneDelegate.swift in Sources */,
 				F8120F852B3C316300388592 /* OrderListStruct.swift in Sources */,
 				F8490E392B3D54D600E05965 /* TopMenuView.swift in Sources */,
