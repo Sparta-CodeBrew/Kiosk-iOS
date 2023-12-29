@@ -18,9 +18,9 @@
                     <rect key="frame" x="0.0" y="0.0" width="690" height="90"/>
                     <segments>
                         <segment title="COFFEE"/>
-                        <segment title="NON COFFEE"/>
-                        <segment title="JUICE/ADE"/>
-                        <segment title="PAIKS CCINO"/>
+                        <segment title="Frappuccino"/>
+                        <segment title="BLENDED"/>
+                        <segment title="COLD BREW"/>
                     </segments>
                 </segmentedControl>
             </subviews>

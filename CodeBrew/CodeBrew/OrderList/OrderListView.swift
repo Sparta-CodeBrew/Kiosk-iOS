@@ -13,14 +13,6 @@ class OrderListView: UIView {
     var orderListTotalSum = 0
     var orderListPrice : [Int] = []
     @IBOutlet weak var OrderListTableView: UITableView!
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-      
-    }
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-    }
  
     
 }

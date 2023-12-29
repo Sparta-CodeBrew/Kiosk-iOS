@@ -9,20 +9,20 @@ import UIKit
 
 class TopMenuView: UIView {
     @IBOutlet weak var segmentControl: UISegmentedControl!
-
+    var menuList = coffeMenu
 }
 extension TopMenuView{
     func setSegmentControl(){
-        segmentControl.selectedSegmentIndex = 0
-        segmentControl.selectedSegmentTintColor = UIColor(named: "SelectMenu")
-        segmentControl.backgroundColor = UIColor(named: "UnSelectMenu")
-        segmentControl.addTarget(self, action: #selector(indexChanged(_:)), for: .valueChanged)
+        segmentControl.selectedSegmentIndex = 0 // 제일 처음 선 택 Index
         let unSelectTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor(named: "SelectMenu")]
         let selectTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        let font = UIFont.systemFont(ofSize: 10) // 전체 Font 크기
         segmentControl.setTitleTextAttributes(unSelectTextAttributes as [NSAttributedString.Key : Any], for: .normal)
         segmentControl.setTitleTextAttributes(selectTextAttributes, for: .selected)
-    }
-    @objc func indexChanged(_ sender : UISegmentedControl){
-        print(sender.selectedSegmentIndex)
+        segmentControl.setTitleTextAttributes([NSAttributedString.Key.font: font], for: .normal)
+        segmentControl.selectedSegmentTintColor = UIColor(named: "SelectMenu")
+        segmentControl.backgroundColor = UIColor(named: "UnSelectMenu")
+        
+   
     }
 }
