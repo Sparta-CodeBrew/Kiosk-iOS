@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="jHr-Gw-Wo7" customClass="TopMenuView" customModule="CodeBrew" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="690" height="89"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Iyy-bQ-Mwq">
+                    <rect key="frame" x="0.0" y="0.0" width="690" height="90"/>
+                    <segments>
+                        <segment title="COFFEE"/>
+                        <segment title="NON COFFEE"/>
+                        <segment title="JUICE/ADE"/>
+                        <segment title="PAIKS CCINO"/>
+                    </segments>
+                </segmentedControl>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="cza-1n-2Qf"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Iyy-bQ-Mwq" secondAttribute="trailing" id="6pE-vl-e5q"/>
+                <constraint firstItem="Iyy-bQ-Mwq" firstAttribute="leading" secondItem="jHr-Gw-Wo7" secondAttribute="leading" id="ONW-MK-5wx"/>
+                <constraint firstItem="Iyy-bQ-Mwq" firstAttribute="top" secondItem="jHr-Gw-Wo7" secondAttribute="top" id="dGA-vb-uhx"/>
+                <constraint firstItem="Iyy-bQ-Mwq" firstAttribute="bottom" secondItem="jHr-Gw-Wo7" secondAttribute="bottom" id="kHb-Pw-1x8"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="segmentControl" destination="Iyy-bQ-Mwq" id="IRj-Qo-YxS"/>
+            </connections>
+            <point key="canvasLocation" x="418.32061068702291" y="-203.16901408450704"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
